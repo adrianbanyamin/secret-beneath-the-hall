@@ -1,0 +1,160 @@
+:root {
+  --paper: #f4efe4;
+  --ink: #23201b;
+  --faded: #6b6458;
+  --rule: #cfc5b2;
+  --red: #8c2a1c;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 19px; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  line-height: 1.55;
+}
+
+.page {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.1rem 4rem;
+}
+
+header.top {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: .6rem;
+  margin-bottom: 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .4rem 1rem;
+  font-size: .85rem;
+}
+
+header.top a.home {
+  font-variant: small-caps;
+  letter-spacing: .06em;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+header.top nav a { margin-left: .9rem; }
+header.top nav a:first-child { margin-left: 0; }
+
+a { color: var(--red); text-underline-offset: 2px; }
+a:hover { color: var(--ink); }
+
+h1 {
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  margin: 0 0 .3rem;
+}
+
+h1 + .sub {
+  font-style: italic;
+  color: var(--faded);
+  margin: 0 0 2rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-variant: small-caps;
+  letter-spacing: .05em;
+  font-size: 1.15rem;
+  margin: 2.6rem 0 .6rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 1.8rem 0 .3rem;
+}
+
+p { margin: 0 0 1rem; }
+
+blockquote {
+  margin: 1.2rem 0 1.2rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--rule);
+  font-style: italic;
+}
+
+.mark {
+  color: var(--red);
+  font-family: "Segoe UI Historic", "Noto Sans Cuneiform", serif;
+}
+
+/* contents */
+.part { margin-top: 1.8rem; }
+.part-name {
+  font-variant: small-caps;
+  letter-spacing: .05em;
+  color: var(--faded);
+  font-size: .9rem;
+  margin-bottom: .3rem;
+}
+ol.chapters { list-style: none; margin: 0; padding: 0; }
+ol.chapters li {
+  display: flex;
+  gap: .7rem;
+  padding: .12rem 0;
+}
+ol.chapters .num {
+  width: 4.5rem;
+  flex-shrink: 0;
+  color: var(--faded);
+  font-size: .85rem;
+  padding-top: .12rem;
+}
+ol.chapters .soon { color: var(--faded); }
+
+/* video */
+.video {
+  margin: 1.2rem 0 2rem;
+  border: 1px solid var(--rule);
+  background: #ebe4d5;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--faded);
+  font-style: italic;
+}
+.video iframe { width: 100%; height: 100%; border: 0; }
+
+/* pronunciation / names */
+dl { margin: 0; }
+dt { font-weight: 600; margin-top: .9rem; }
+dt .say { font-weight: 400; color: var(--faded); font-style: italic; margin-left: .4rem; }
+dd { margin: .1rem 0 0 0; }
+
+.remember { padding-left: 1.2rem; }
+.remember li { margin-bottom: .3rem; }
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: .8rem;
+  border-top: 1px solid var(--rule);
+  font-size: .8rem;
+  color: var(--faded);
+}
+
+.next {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: .9rem;
+}
+
+@media (max-width: 480px) {
+  html { font-size: 17px; }
+  h1 { font-size: 1.75rem; }
+  ol.chapters .num { width: 3.6rem; }
+}
